@@ -1,0 +1,28 @@
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 5rem 0;
+}
+
+.mapped-recipe-image-container {
+  aspect-ratio: 3 / 2;
+}
+
+.mapped-recipes-button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-color: #FF7F50;
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+
+  .recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+
+}
