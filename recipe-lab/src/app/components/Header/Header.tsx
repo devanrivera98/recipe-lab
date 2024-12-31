@@ -1,3 +1,6 @@
+'use client'
+// use client here might be a temporary solution
+
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
 

@@ -1,3 +1,6 @@
+'use client'
+// temp use client placeholder for now 
+
 import './pickedRecipes.css'
 import { FaHeart } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa";

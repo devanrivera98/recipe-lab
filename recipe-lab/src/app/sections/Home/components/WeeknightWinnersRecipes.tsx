@@ -1,7 +1,7 @@
 import useRecipeId from '../../../hooks/useRecipeId'
 import useSearchApi from '../../../hooks/useSearchApi'
 import './pickedRecipes.css'
-import RecMappedRecipes from './RecMappedRecipes'
+import RecMappedRecipes from "./RecMappedRecipes";
 
 
 
@@ -84,4 +84,3 @@ export default function WeeknightWinnersRecipes() {
     </>
   )
 }
-
