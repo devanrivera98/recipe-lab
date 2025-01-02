@@ -1,30 +1,14 @@
 'use client'
-// use client here might be a temporary solution
 
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
-
-
-import { useState, useEffect } from "react";
 import './header.css'
+import useHeaderObserver from "./hooks/useHeaderObserver";
 
 
 export default function Header() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.screen.width > 768) {
-        setIsOpen(false)
-      }
-    }
-    window.addEventListener('resize', handleResize)
-
-    return () => {
-      window.removeEventListener('resize', handleResize)
-    }
-  }, [])
-
+  const [isOpen, setIsOpen] = useHeaderObserver();
+  // Use custom hook
   //need to alternate login with my account once accounts are functional
 
   return (
@@ -32,7 +16,7 @@ export default function Header() {
       <header className="h-20 p-4 md:p-0 shadow-md">
         <div className="container mx-auto h-full flex justify-between items-center">
           <div>
-            <h1 className="text-xl font-extrabold font-body text-lightOrange">Heirloom</h1>
+            <h1 className="text-xl font-extrabold font-body text-lightOrange">Rumble Recipes</h1>
           </div>
           <div className="flex w-full justify-end md:hidden">
             <button onClick={() => setIsOpen(!isOpen)}>
