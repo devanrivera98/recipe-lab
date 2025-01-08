@@ -1,0 +1,20 @@
+/* Table of contents
+--------------------------------
+-- base imports
+-- component imports
+-- pages imports
+**/
+
+
+/* base imports */
+@use "./base/reset";
+
+/* components import */
+@use './components/navbar';
+
+/* pages imports */
+@use './pages/home';
+
+
+// import your abstract/variables as * into your buttons.scss not here
+// $btn-background

@@ -1,0 +1,16 @@
+//examples so far not in actual project
+
+$red: #FF595E;
+$blue: #0A2463;
+$yellow: #F9CB40;
+
+$cursors: pointer auto inherit; 
+
+//scss map
+$theme-colors: (
+  "primary": $red,
+  "secondary": $blue,
+  "warning": $yellow,
+)
+
+$btn-background: #FF595E;

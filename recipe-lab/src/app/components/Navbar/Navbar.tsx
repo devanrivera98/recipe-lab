@@ -2,11 +2,10 @@
 
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
-import './header.css'
 import useHeaderObserver from "./hooks/useHeaderObserver";
 
 
-export default function Header() {
+export default function Navbar() {
   const [isOpen, setIsOpen] = useHeaderObserver();
   // Use custom hook
   //need to alternate login with my account once accounts are functional
