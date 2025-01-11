@@ -1,0 +1,70 @@
+.home-top-of-page {
+  display: grid;
+  grid-gap: 2rem;
+  align-items: start;
+}
+
+.trending-title {
+  border-bottom: solid 20px rgb(231, 170, 70);
+  display: inline-block;
+  line-height: 0.8rem;
+}
+
+.trending-aspect-ratio {
+  aspect-ratio: 5 / 3;
+}
+
+.orange-grid-container {
+  grid-template-areas: "hero";
+}
+
+.orange-image-container {
+  grid-area: hero;
+  width: 100%;
+  overflow: hidden;
+}
+
+.orange-hero-card {
+  display: block;
+}
+
+.orange-grid-container:hover .savor-text {
+  text-decoration: underline;
+  text-decoration-color: #fad9cdfe;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+}
+
+@media screen and (min-width: 768px) {
+
+  // .trending-aspect-ratio {
+  //   aspect-ratio: 5 / 3;
+  // }
+
+  .orange-cranberry-aspect {
+    aspect-ratio: 2 / 1;
+  }
+
+  .orange-hero-card {
+    grid-area: hero;
+    display: grid;
+    align-items: center;
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+  .home-top-of-page {
+    display: grid;
+    grid-template-columns: auto 25rem;
+  }
+
+  .trending-aspect-ratio {
+    max-width: 15rem;
+    aspect-ratio: 3 / 2;
+  }
+
+  .orange-cranberry-aspect {
+    aspect-ratio: 3 / 1;
+  }
+}
