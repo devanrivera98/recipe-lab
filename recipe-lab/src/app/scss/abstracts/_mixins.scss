@@ -1,0 +1,7 @@
+@mixin button($value) {
+  background-color: $value;
+
+  &:hover {
+    opacity: .2;
+  }
+}

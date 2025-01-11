@@ -3,6 +3,7 @@
 -- base imports
 -- component imports
 -- pages imports
+-- utilities imports
 **/
 
 
@@ -15,6 +16,7 @@
 /* pages imports */
 @use './pages/home';
 
+@use './utilities/aspect-ratio'
 
 // import your abstract/variables as * into your buttons.scss not here
 // $btn-background

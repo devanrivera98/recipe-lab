@@ -1,10 +1,9 @@
-import './home.css'
-import HomeMainContent from '../sections/Home/components/HomeMainContent'
-import TrendingMainPage from '../sections/Home/components/TrendingMainRecipe'
-import OrangeCranberryHero from '../sections/Home/components/OrangeCranberryHero'
-import WeeknightWinnersRecipes from '../sections/Home/components/WeeknightWinnersRecipes'
-import BreakfastIdeas from '../sections/Home/components/BreakfastIdeas'
-import ContactStrip from '../sections/Home/components/ContactStrip'
+import HomeMainContent from './components/HomeMainContent'
+import TrendingMainPage from './components/TrendingMainRecipe'
+import OrangeCranberryHero from './components/OrangeCranberryHero'
+import WeeknightWinnersRecipes from './components/WeeknightWinnersRecipes'
+import BreakfastIdeas from './components/BreakfastIdeas'
+import ContactStrip from './components/ContactStrip'
 // import useSearchApi from '../../hooks/useSearchApi'
 
 export default function HomePage() {

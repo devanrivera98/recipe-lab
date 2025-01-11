@@ -1,4 +1,5 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 
 @each $cursor in $cursors {
   .cursor-#{$cursor} {
@@ -10,5 +11,6 @@
 @each $color, value in $theme-colors {
   .btn-#{$color} {
     background: $value;
+    @include button($value);
   }
 }
