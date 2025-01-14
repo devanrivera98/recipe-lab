@@ -16,9 +16,10 @@ export default function Navbar() {
       <header className="h-20 p-4 md:p-0 shadow-md">
         <div className="container mx-auto h-full flex justify-between items-center">
           <div>
-            <h1 className="text-xl font-extrabold font-body text-lightOrange">Rumble Recipes</h1>
+            <h1 className="hidden md:block text-xl font-extrabold font-body text-lightOrange">Rumble Recipes</h1>
+            <h1 className="md:hidden text-xl font-extrabold font-body text-lightOrange">RR</h1>
           </div>
-          <div className="w-1/2">
+          <div className="flex-grow md:flex-grow-0 md:w-1/3">
             <form className="px-3">
               <div className="flex border border-black rounded relative h-9">
                 <input className="flex-grow pl-1 rounded" placeholder="Find a recipe"></input>
@@ -28,9 +29,9 @@ export default function Navbar() {
               </div>
             </form>
           </div>
-          <div className="flex w-full justify-end md:hidden">
+          <div className="flex justify-end md:hidden">
             <button onClick={() => setIsOpen(!isOpen)}>
-              {isOpen ? <IoClose size={28} strokeWidth={15}/>        : <GiHamburgerMenu  size={25} />}
+              {isOpen ? <IoClose size={25} strokeWidth={15}/>        : <GiHamburgerMenu  size={25} />}
             </button>
           </div>
           <div className={`${isOpen ? 'div-menu-open': 'div-menu-closed md:block'}`}>
