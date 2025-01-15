@@ -1,9 +1,4 @@
-import RecMappedRecipes from "./RecMappedRecipes";
-import useRecipeId from "../../../hooks/useRecipeId";
-
-export default function BreakfastIdeas() {
-
-    const breakfastRecipes = [
+    export const breakfastRecipes = [
     {
       id: 634882,
       image: "./images/breakfast-ideas/breakfast-burrito.png",
@@ -68,12 +63,3 @@ export default function BreakfastIdeas() {
       servingSize: 2
     }
   ]
-
-  return (
-    <>
-    <section className='px-2 md:px-0 mb-16'>
-      <RecMappedRecipes categoryTitle='Breakfast Ideas' recipeList={breakfastRecipes} />
-    </section>
-    </>
-  )
-}

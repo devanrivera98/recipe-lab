@@ -2,7 +2,7 @@ export default function HomeMainContent() {
 
   return (
     <>
-      <section className="home-top-of-page pt-16 px-2 gap-5 mb-16">
+      <section className="home-top-of-page pt-16 px-2 md:px-0  mb-16">
           <img alt="martha-stewart-recipe-collection" src="./images/martha-stewart-photo.jpg" />
           <div className="bg-fadedGreen p-6">
             <h1 className='text-2xl font-bold text-center pb-6'>Food News</h1>

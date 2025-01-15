@@ -1,13 +1,4 @@
-import useRecipeId from '../../../hooks/useRecipeId'
-import useSearchApi from '../../../hooks/useSearchApi'
-import './pickedRecipes.css'
-import RecMappedRecipes from "./RecMappedRecipes";
-
-
-
-export default function WeeknightWinnersRecipes() {
-
-  const quickRecipes = [
+  export const quickRecipes = [
     {
       id: 662917,
       image: "./images/weeknight-winners/meatloaf-photo.png",
@@ -72,15 +63,3 @@ export default function WeeknightWinnersRecipes() {
       servingSize: 4
     }
   ]
-
-  // console.log(useSearchApi('steak salad'));
-  // console.log(useRecipeId(1095697))
-
-  return (
-    <>
-    <section className='px-2 mb-16 md:px-0'>
-      <RecMappedRecipes categoryTitle='Weeknight Winners' recipeList={quickRecipes} />
-    </section>
-    </>
-  )
-}
