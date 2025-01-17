@@ -1,11 +1,11 @@
 'use client'
-// temp use client placeholder for now 
+// temp use client placeholder for now
 
 import './pickedRecipes.css'
 import { FaHeart } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa";
 import { useState } from 'react';
-import { RecRecipe } from '../interfaces/home';
+import { RecRecipe } from '../../interfaces/home';
 
 
 export default function EachRecRecipe(recipe: RecRecipe) {

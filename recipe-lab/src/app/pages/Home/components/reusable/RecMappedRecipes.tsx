@@ -1,5 +1,5 @@
 import './pickedRecipes.css'
-import { RecMappedRecipesProps, RecRecipe } from '../interfaces/home';
+import { RecMappedRecipesProps, RecRecipe } from '../../interfaces/home';
 import EachRecRecipe from './EachRecRecipe';
 
 export default function RecMappedRecipes({categoryTitle, recipeList}: RecMappedRecipesProps) {

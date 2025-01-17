@@ -1,5 +1,5 @@
-import useRecipeId from '../../../hooks/useRecipeId'
-import useSearchApi from '../../../hooks/useSearchApi'
+import useRecipeId from '../../../../hooks/useRecipeId'
+import useSearchApi from '../../../../hooks/useSearchApi'
 import './pickedRecipes.css'
 import RecMappedRecipes from "./RecMappedRecipes";
 

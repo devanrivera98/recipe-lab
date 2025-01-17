@@ -12,11 +12,12 @@
 
 /* components import */
 @use './components/navbar';
+@use './components/articles';
 
 /* pages imports */
 @use './pages/home';
 
-@use './utilities/aspect-ratio'
+@use './utilities/aspect-ratio';
 
 // import your abstract/variables as * into your buttons.scss not here
 // $btn-background

@@ -4,7 +4,9 @@ $red: #FF595E;
 $blue: #0A2463;
 $yellow: #F9CB40;
 
-$cursors: pointer auto inherit; 
+$light-orange: #FF7F50;
+
+$cursors: pointer auto inherit;
 
 //scss map
 $theme-colors: (
@@ -13,4 +15,4 @@ $theme-colors: (
   "warning": $yellow,
 )
 
-$btn-background: #FF595E;
+// $btn-background: #FF595E;
