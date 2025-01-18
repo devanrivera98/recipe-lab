@@ -1,7 +1,34 @@
+@use './variables' as *;
+
 @mixin button($value) {
   background-color: $value;
 
   &:hover {
     opacity: .2;
   }
+}
+
+@mixin hover-highlight($color: $light-orange, $thickness: 1px, $offset: 4px) {
+
+  cursor: pointer;
+
+  &:hover .item-title {
+    text-decoration: underline;
+    text-decoration-color: $color;
+    text-decoration-thickness: $thickness;
+    text-underline-offset: $offset;
+  }
+
+ //below are not actually used in this codebase but examples for how to customize mixins
+
+
+
+    // .article-card {
+    //   @include hover-highlight($light-orange, 1px, 6px);
+    // }
+
+    // .feature-card {
+    //   @include hover-highlight($blue, 2px, 4px);
+    // }
+// mixins classes like above should be used in the class itself with @include and should not be created in the mixin itself
 }

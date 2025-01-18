@@ -3,9 +3,9 @@ export default function HomeMainContent() {
   return (
     <>
       <section className="home-top-of-page pt-16 px-2 md:px-0  mb-16">
-        <div className="article-card cursor-pointer">
+        <div className="article-card">
           <img alt="martha-stewart-recipe-collection" src="./images/martha-stewart-photo.jpg" />
-          <div className="py-1">
+          <div className="py-1 item-title">
             <h1 className="article-card-title text-3xl py-2">Discover the Best Recipes: Perfect for Hosting Every Occasion</h1>
             <div>Sometimes there just aren't enough hours in the day. Here are some great quick and tasty meals that anyone can make in less than 15 minutes.</div>
           </div>

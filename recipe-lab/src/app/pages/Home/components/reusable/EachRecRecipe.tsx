@@ -15,7 +15,7 @@ export default function EachRecRecipe(recipe: RecRecipe) {
   return (
     <>
       <a>
-        <div className='relative'>
+        <div className='recipe-card relative'>
           <button className='mapped-recipes-button' onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
             {isHovered ?
             <FaHeart size={22} style={{color: 'white'}} />
@@ -26,7 +26,7 @@ export default function EachRecRecipe(recipe: RecRecipe) {
             <img className='w-full h-full object-cover' src={recipe.image} />
           </div>
           <h5 className='py-2.5 md:py-5'>{recipe.foodType}</h5>
-          <h1 className='text-xl font-bold'>{recipe.name}</h1>
+          <h1 className='item-title text-xl font-bold'>{recipe.name}</h1>
         </div>
       </a>
     </>

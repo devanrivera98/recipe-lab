@@ -1,17 +1,21 @@
 /* Table of contents
 --------------------------------
+-- mixin imports
 -- base imports
 -- component imports
 -- pages imports
 -- utilities imports
 **/
 
+/* mixin imports */
+// @use './abstracts/mixins';
 
 /* base imports */
 @use "./base/reset";
 
 /* components import */
 @use './components/navbar';
+@use './components/recipe-cards';
 @use './components/articles';
 
 /* pages imports */
