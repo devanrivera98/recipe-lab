@@ -14,14 +14,14 @@
 @use "./base/reset";
 
 /* components import */
-@use './components/navbar';
-@use './components/recipe-cards';
-@use './components/articles';
+@use "./components/navbar";
+@use "./components/recipe-cards";
+@use "./components/articles";
 
 /* pages imports */
-@use './pages/home';
+@use "./pages/home";
 
-@use './utilities/aspect-ratio';
+@use "./utilities/aspect-ratio";
 
 // import your abstract/variables as * into your buttons.scss not here
 // $btn-background
