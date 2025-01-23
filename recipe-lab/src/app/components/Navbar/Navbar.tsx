@@ -54,11 +54,11 @@ export default function Navbar() {
               <li
                 className={`${isOpen ? "pt-10 menu-li-open" : "menu-li-closed"} text-xl font-heading`}
               >
-                <a>
+                <a className="cursor-pointer">
                   <div className="flex justify-center items-center">
                     <CgProfile color="#FF7F50" />
-                    <div className="text-xl pl-1 hover:underline underline-offset-4">
-                      <span className="hover:underline underline-offset-4">
+                    <div className="text-xl pl-1">
+                      <span className="text-lg hover:underline underline-offset-4">
                         Log In
                       </span>
                     </div>
@@ -68,12 +68,24 @@ export default function Navbar() {
               <li
                 className={`${isOpen ? "menu-li-open" : "menu-li-closed"} text-xl font-heading`}
               >
-                <a className="hover:underline">Recipes</a>
+                <a className="cursor-pointer">
+                    <div className="text-xl pl-1">
+                      <span className="text-lg hover:underline underline-offset-4">
+                        My Recipes
+                      </span>
+                    </div>
+                </a>
               </li>
               <li
                 className={`${isOpen ? "menu-li-open" : "menu-li-closed"} text-xl font-heading `}
               >
-                Tips
+                <a className="cursor-pointer">
+                    <div className="text-xl pl-1">
+                      <span className="text-lg hover:underline underline-offset-4">
+                        Tips
+                      </span>
+                    </div>
+                </a>
               </li>
             </ul>
           </div>
