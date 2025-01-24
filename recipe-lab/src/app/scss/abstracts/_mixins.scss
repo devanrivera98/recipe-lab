@@ -29,3 +29,9 @@
   // }
   // mixins classes like above should be used in the class itself with @include and should not be created in the mixin itself
 }
+
+@mixin rumble-brand($color: $dark-orange, $font-size: 18px, $font-weight: bold) {
+  color: $color;
+  font-size: $font-size;
+  font-weight: $font-weight;
+}

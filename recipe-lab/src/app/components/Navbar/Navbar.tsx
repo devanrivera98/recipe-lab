@@ -16,12 +16,12 @@ export default function Navbar() {
       <header className="h-20 p-4 md:p-0 shadow-md">
         <div className="container mx-auto h-full flex justify-between items-center">
           <div>
-            <h1 className="hidden md:block text-xl font-extrabold font-body text-lightOrange">
+            <a className="hidden md:block text-xl font-extrabold font-body text-darkOrange cursor-pointer">
               Rumble Recipes
-            </h1>
-            <h1 className="md:hidden text-xl font-extrabold font-body text-lightOrange">
+            </a>
+            <a className="md:hidden text-xl font-extrabold font-body text-darkOrange">
               RR
-            </h1>
+            </a>
           </div>
           <div className="flex-grow md:flex-grow-0 md:w-1/3">
             <form className="px-3">
@@ -30,7 +30,7 @@ export default function Navbar() {
                   className="flex-grow pl-1 rounded"
                   placeholder="Find a recipe"
                 ></input>
-                <button className="absolute bg-lightOrange px-3 h-full right-0 rounded">
+                <button className="absolute bg-lightOrange hover:bg-darkOrange px-3 h-full right-0 rounded">
                   <FaMagnifyingGlass color="white" />
                 </button>
               </div>
@@ -58,7 +58,7 @@ export default function Navbar() {
                   <div className="flex justify-center items-center">
                     <CgProfile color="#FF7F50" />
                     <div className="text-xl pl-1">
-                      <span className="text-lg hover:underline underline-offset-4">
+                      <span className="text-lg hover:underline underline-offset-4 decoration-lightOrange decoration-1">
                         Log In
                       </span>
                     </div>
@@ -70,7 +70,7 @@ export default function Navbar() {
               >
                 <a className="cursor-pointer">
                     <div className="text-xl pl-1">
-                      <span className="text-lg hover:underline underline-offset-4">
+                      <span className="text-lg hover:underline underline-offset-4 decoration-lightOrange decoration-1">
                         My Recipes
                       </span>
                     </div>
@@ -81,7 +81,7 @@ export default function Navbar() {
               >
                 <a className="cursor-pointer">
                     <div className="text-xl pl-1">
-                      <span className="text-lg hover:underline underline-offset-4">
+                      <span className="text-lg hover:underline underline-offset-4 decoration-lightOrange decoration-1">
                         Tips
                       </span>
                     </div>
