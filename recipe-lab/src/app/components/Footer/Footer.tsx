@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
   <>
-    <footer className="py-16 bg-lightGray">
+    <footer className="py-16 bg-lightGray border-t-2">
       <div className="container mx-auto flex flex-col gap-y-4">
         <div className="flex justify-center">
           <a className="rumble-title">Rumble Recipes</a>
@@ -9,17 +9,17 @@ export default function Footer() {
         <div className="flex justify-center">
           <ul className="flex gap-10">
             <li>
-              <a>
+              <a className="nav-title">
                 Home
               </a>
             </li>
             <li>
-              <a>
+              <a className="nav-title">
                 My Recipes
               </a>
             </li>
             <li>
-              <a>
+              <a className="nav-title">
                 Tips
               </a>
             </li>

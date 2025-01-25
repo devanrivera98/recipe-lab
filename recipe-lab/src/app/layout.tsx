@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Crimson_Pro, Mulish } from "next/font/google";
 import "./globals.css";
 import "./scss/main.scss";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const crimsonPro = Crimson_Pro({
+  variable: "--font-crimson-pro",
+  subsets: ["latin"]
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const mulish = Mulish({
+  variable: "--font-mulish",
+  subsets: ["latin"]
+})
+
 
 export const metadata: Metadata = {
   title: "Rumble Recipe",
@@ -25,8 +26,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
+            {/* <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      > */}
+      <body
+className={`${crimsonPro.variable} ${mulish.variable}`}
       >
         {children}
       </body>

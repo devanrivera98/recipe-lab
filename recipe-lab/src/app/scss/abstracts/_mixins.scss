@@ -8,26 +8,38 @@
   }
 }
 
-@mixin hover-highlight($color: $light-orange, $thickness: 1px, $offset: 4px) {
+//below are not actually used in this codebase but examples for how to customize mixins
+
+// .article-card {
+//   @include hover-highlight($light-orange, 1px, 6px);
+// }
+
+// .feature-card {
+//   @include hover-highlight($blue, 2px, 4px);
+// }
+// mixins classes like above should be used in the class itself with @include and should not be created in the mixin itself
+
+@mixin hover-cursor {
   cursor: pointer;
+}
 
+@mixin underline-style($color: $light-orange, $thickness: 1px, $offset: 4px) {
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: $color;
+  text-decoration-thickness: $thickness;
+  text-underline-offset: $offset;
+}
+
+@mixin hover-item-title($color: $light-orange, $thickness: 1px, $offset: 4px) {
   &:hover .item-title {
-    text-decoration: underline;
-    text-decoration-color: $color;
-    text-decoration-thickness: $thickness;
-    text-underline-offset: $offset;
+    @include underline-style($color, $thickness, $offset)
   }
+}
 
-  //below are not actually used in this codebase but examples for how to customize mixins
-
-  // .article-card {
-  //   @include hover-highlight($light-orange, 1px, 6px);
-  // }
-
-  // .feature-card {
-  //   @include hover-highlight($blue, 2px, 4px);
-  // }
-  // mixins classes like above should be used in the class itself with @include and should not be created in the mixin itself
+@mixin hover-highlight($color: $light-orange, $thickness: 1px, $offset: 4px) {
+  @include hover-cursor();
+  @include hover-item-title($color, $thickness, $offset);
 }
 
 @mixin rumble-brand($color: $dark-orange, $font-size: 18px, $font-weight: bold) {

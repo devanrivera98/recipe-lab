@@ -7,11 +7,13 @@
 -- utilities imports
 **/
 
-/* mixin imports */
+/* abstracts imports */
+@use "./abstracts/variables";
 // @use './abstracts/mixins';
 
 /* base imports */
 @use "./base/reset";
+@use "./base/global";
 
 /* components import */
 @use "./components/navbar";

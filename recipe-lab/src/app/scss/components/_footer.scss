@@ -3,3 +3,7 @@
 .rumble-title {
   @include rumble-brand($font-size: 36px);
 }
+
+.nav-title:hover {
+  @include underline-style()
+}
