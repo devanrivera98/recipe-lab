@@ -1,9 +1,9 @@
-import { useState } from 'react';
-import { addDoc } from 'firebase/firestore';
-import { auth } from '../../config/firebase-config';
+import { useState } from "react";
+import { addDoc } from "firebase/firestore";
+import { auth } from "../../config/firebase-config";
 
 export default function AddRecipe({ collection }) {
-  const [newRecipeName, setNewRecipeName] = useState('');
+  const [newRecipeName, setNewRecipeName] = useState("");
   const [newPrepTime, setNewPrepTime] = useState(0);
   const [isThereDairy, setIsThereDairy] = useState(false);
 

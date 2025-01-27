@@ -1,18 +1,18 @@
-import { useRecipeList } from '../../hooks/useRecipeList';
-import { deleteRecipe } from '../../services/deleteRecipe';
-import { updateRecipeTitle } from '../../services/updateRecipeTitle';
-import { useState } from 'react';
+import { useRecipeList } from "../../hooks/useRecipeList";
+import { deleteRecipe } from "../../services/deleteRecipe";
+import { updateRecipeTitle } from "../../services/updateRecipeTitle";
+import { useState } from "react";
 // import { storage } from '../../config/firebase-config';
-import { uploadFile } from '../../services/uploadFile';
+import { uploadFile } from "../../services/uploadFile";
 
 export default function PersonalRecipeList() {
-  const [updatedTitle, setUpdatedTitle] = useState('');
+  const [updatedTitle, setUpdatedTitle] = useState("");
 
   //file upload
   const [fileUpload, setFileUpload] = useState<File | null>(null);
 
   const recipeList = useRecipeList();
-  console.log('here is all the recipe', recipeList);
+  console.log("here is all the recipe", recipeList);
 
   return (
     <>
@@ -34,7 +34,12 @@ export default function PersonalRecipeList() {
           </div>
         ))}
         <div>
-          <input type="file" onChange={(e) => setFileUpload(e.target.files ? e.target.files[0] : null)}/>
+          <input
+            type="file"
+            onChange={(e) =>
+              setFileUpload(e.target.files ? e.target.files[0] : null)
+            }
+          />
           <button onClick={() => uploadFile(fileUpload)}>Upload File</button>
         </div>
       </div>

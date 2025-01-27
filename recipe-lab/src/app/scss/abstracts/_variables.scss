@@ -1,16 +1,22 @@
 //examples so far not in actual project
 
-$red: #FF595E;
-$blue: #0A2463;
-$yellow: #F9CB40;
+$font-crimson-pro: "Crimson Pro", serif;
+$font-mulish: "Mulish", sans-serif;
 
-$cursors: pointer auto inherit; 
+$red: #ff595e;
+$blue: #0a2463;
+$yellow: #f9cb40;
+
+$light-orange: #ff7f50;
+$dark-orange: #FF6A36;
+
+$cursors: pointer auto inherit;
 
 //scss map
 $theme-colors: (
   "primary": $red,
   "secondary": $blue,
   "warning": $yellow,
-)
+);
 
-$btn-background: #FF595E;
+// $btn-background: #FF595E;

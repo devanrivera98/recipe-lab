@@ -1,13 +1,13 @@
-import HomeMainContent from './components/HomeMainContent'
-import TrendingMainPage from './components/TrendingMainRecipe'
-import OrangeCranberryHero from './components/OrangeCranberryHero'
-import WeeknightWinnersRecipes from './components/WeeknightWinnersRecipes'
-import BreakfastIdeas from './components/BreakfastIdeas'
-import ContactStrip from './components/ContactStrip'
+import HomeMainContent from "./components/unique/HomeMainContent";
+import TrendingMainPage from "./components/unique/TrendingMainRecipe";
+import OrangeCranberryHero from "./components/unique/OrangeCranberryHero";
+import ContactStrip from "./components/unique/ContactStrip";
+import SectionalRecommendation from "./components/reusable/SectionalRecommendation";
+import { quickRecipes } from "./data/quickRecipes";
+import { breakfastRecipes } from "./data/breakfastRecipes";
 // import useSearchApi from '../../hooks/useSearchApi'
 
 export default function HomePage() {
-
   // useSearchApi('orange cranberry')
   //fix the section top padding when completed
 
@@ -16,13 +16,18 @@ export default function HomePage() {
       <div className="container mx-auto">
         <HomeMainContent />
         <TrendingMainPage />
-        <BreakfastIdeas />
+        <SectionalRecommendation
+          name="Breakfast Ideas"
+          dataList={breakfastRecipes}
+        />
       </div>
       <OrangeCranberryHero />
       <div className="container mx-auto">
-        <WeeknightWinnersRecipes />
+        <SectionalRecommendation
+          name="Weeknights Winners"
+          dataList={quickRecipes}
+        />
       </div>
-      <ContactStrip />
     </>
-  )
+  );
 }

@@ -1,0 +1,5 @@
+@use "../abstracts/mixins" as *;
+
+.article-card {
+  @include hover-highlight();
+}

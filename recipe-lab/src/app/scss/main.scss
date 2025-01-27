@@ -1,22 +1,30 @@
 /* Table of contents
 --------------------------------
+-- mixin imports
 -- base imports
 -- component imports
 -- pages imports
 -- utilities imports
 **/
 
+/* abstracts imports */
+@use "./abstracts/variables";
+// @use './abstracts/mixins';
 
 /* base imports */
 @use "./base/reset";
+@use "./base/global";
 
 /* components import */
-@use './components/navbar';
+@use "./components/navbar";
+@use "./components/recipe-cards";
+@use "./components/articles";
+@use "./components/footer";
 
 /* pages imports */
-@use './pages/home';
+@use "./pages/home";
 
-@use './utilities/aspect-ratio'
+@use "./utilities/aspect-ratio";
 
 // import your abstract/variables as * into your buttons.scss not here
 // $btn-background
