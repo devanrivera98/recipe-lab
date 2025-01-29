@@ -1,7 +1,6 @@
 import HomeMainContent from "./components/unique/HomeMainContent";
 import TrendingMainPage from "./components/unique/TrendingMainRecipe";
 import OrangeCranberryHero from "./components/unique/OrangeCranberryHero";
-import ContactStrip from "./components/unique/ContactStrip";
 import SectionalRecommendation from "./components/reusable/SectionalRecommendation";
 import { quickRecipes } from "./data/quickRecipes";
 import { breakfastRecipes } from "./data/breakfastRecipes";

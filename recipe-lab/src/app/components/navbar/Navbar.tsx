@@ -4,6 +4,7 @@ import { CgProfile } from "react-icons/cg";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaMagnifyingGlass } from "react-icons/fa6";
 import { IoClose } from "react-icons/io5";
+import Link from "next/link";
 import useHeaderObserver from "./hooks/useHeaderObserver";
 
 export default function Navbar() {
@@ -16,9 +17,9 @@ export default function Navbar() {
       <header className="h-20 p-4 md:p-0 shadow-md">
         <div className="container mx-auto h-full flex justify-between items-center">
           <div>
-            <a className="hidden md:block text-xl font-extrabold font-body text-darkOrange cursor-pointer">
+            <Link href={'/'} className="hidden md:block text-xl font-extrabold font-body text-darkOrange cursor-pointer">
               Rumble Recipes
-            </a>
+            </Link>
             <a className="md:hidden text-xl font-extrabold font-body text-darkOrange">
               RR
             </a>

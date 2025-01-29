@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Crimson_Pro, Mulish } from "next/font/google";
+import Footer from "./components/footer/Footer";
+import Navbar from "./components/navbar/Navbar";
 import "./globals.css";
 import "./scss/main.scss";
 
@@ -32,7 +34,9 @@ export default function RootLayout({
       <body
 className={`${crimsonPro.variable} ${mulish.variable}`}
       >
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
