@@ -13,7 +13,7 @@ export default function EachRecRecipe(recipe: RecRecipe) {
 
   return (
     <>
-    <Link href={`/recipe-page/15`}>
+    <Link href={`/search`}>
 
         <div className="recipe-card relative">
           <button

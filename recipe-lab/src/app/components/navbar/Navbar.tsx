@@ -5,7 +5,9 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { FaMagnifyingGlass } from "react-icons/fa6";
 import { IoClose } from "react-icons/io5";
 import Link from "next/link";
+import SearchBar from "./SearchBar";
 import useHeaderObserver from "./hooks/useHeaderObserver";
+import React, { useState } from "react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useHeaderObserver();
@@ -25,17 +27,7 @@ export default function Navbar() {
             </a>
           </div>
           <div className="flex-grow md:flex-grow-0 md:w-1/3">
-            <form className="px-3">
-              <div className="flex border border-black rounded relative h-9">
-                <input
-                  className="flex-grow pl-1 rounded"
-                  placeholder="Find a recipe"
-                ></input>
-                <button className="absolute bg-lightOrange hover:bg-darkOrange px-3 h-full right-0 rounded">
-                  <FaMagnifyingGlass color="white" />
-                </button>
-              </div>
-            </form>
+            <SearchBar />
           </div>
           <div className="flex justify-end md:hidden">
             <button onClick={() => setIsOpen(!isOpen)}>
