@@ -1,15 +1,18 @@
 import getSpoonRecipes from "@/app/utils/spoonacular/getSpoonRecipes";
 import { FaMagnifyingGlass } from "react-icons/fa6";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 
 export default function SearchBar() {
 
   const [query, setQuery] = useState('');
+  const router = useRouter();
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
-    const data = await getSpoonRecipes(query);
-    console.log(data)
+    // const data = await getSpoonRecipes(query);
+    router.push(`/search?query=${encodeURIComponent(query)}`)
+
   }
 
   function handleRecipeInput(e: React.ChangeEvent<HTMLInputElement>) {

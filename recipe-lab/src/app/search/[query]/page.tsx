@@ -1,10 +1,10 @@
-export default async function RecipePage({params} : {params: Promise<{recipeId : string}>}) {
+// export default async function RecipePage() {
 
-  const recipeId = (await params).recipeId
+//   return (
+//     <>
+//       <div>This is the individual id search page</div>
+//     </>
+//   )
+// }
 
-  return (
-    <>
-      <div>This is the search page {recipeId}</div>
-    </>
-  )
-}
+//actual recipe will be moved to recipe page 
