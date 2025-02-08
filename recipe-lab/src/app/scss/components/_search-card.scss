@@ -1,0 +1,36 @@
+@use "../abstracts/mixins" as *;
+
+
+.search-items-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.5rem;
+}
+
+.search-card-container {
+  width: 100%;
+  max-width: 350px;
+  border: solid;
+  border-color:  rgba(0, 0, 0, .15);
+  position: relative;
+}
+
+.search-image-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  background-color: #a0a0a0;
+  display: flex;
+  justify-content: center;
+}
+
+.search-image {
+  width: 90%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heart-button {
+  @include heart-button($right: 20px);
+}
