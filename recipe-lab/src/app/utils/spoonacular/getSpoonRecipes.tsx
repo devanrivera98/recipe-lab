@@ -8,7 +8,7 @@ export default async function getSpoonRecipes(recipeName: string) {
   }
 
   try {
-  const response = await fetch(`https://api.spoonacular.com/recipes/complexSearch?query=${recipeName}&apiKey=${API_KEY}`)
+  const response = await fetch(`https://api.spoonacular.com/recipes/complexSearch?query=${recipeName}&number=40&apiKey=${API_KEY}`)
   if (!response.ok) {
     const errorData = await response.json();
     console.error( "Error fetching data", response.status, errorData)

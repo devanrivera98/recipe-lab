@@ -30,8 +30,8 @@ setList(testData)
 
  const allSearchRecipes = list.map(({title, image, id}: {title: any, image: any, id: any}) => (
         <li key={id} className="search-card-container">
-          <div>
-            <div className="search-image-container">
+          <div className="flex flex-col h-full">
+            <div className="search-image-container flex-none">
               <img onError={(e) => {
                 const target = e.target as HTMLImageElement;
                 target.src = 'https://www.simplyrecipes.com/thmb/OqIa97v74_ejCGqPxeyCs2Lv-1Q=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/SimplyRecipesPlaceholder-d1f4bdc2330a4d5ea617df96c74321cc.png';
@@ -40,7 +40,9 @@ setList(testData)
             <FaHeart />
             </button>
             </div>
-            <h1 className="">{title}</h1>
+            <div className="flex-1 bg-gray-100 p-4">
+            <h1 className="text-2xl">{title}</h1>
+            </div>
           </div>
         </li>
       ))
@@ -51,6 +53,7 @@ setList(testData)
     <ul className="search-items-container flex flex-wrap container mx-auto">
       {allSearchRecipes}
     </ul>
+
     </>
   )
 }
