@@ -35,6 +35,10 @@
   @include heart-button($right: 20px);
 }
 
+.search-card-container:hover h1 {
+  @include underline-style
+}
+
 @media screen and (min-width: 768px) {
 
   .search-items-container {

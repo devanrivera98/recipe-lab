@@ -21,11 +21,12 @@ query = 'empty'
 
   return (
     <>
-    <section>
-    <div>This is the search page for: {query}</div>
+    <section className="container py-5 mx-auto">
+    <div>
+      <h1 className="text-2xl pb-5">Search Results For <b>{query}</b>:</h1>
+    </div>
     <SearchList query={query}/>
     </section>
-
     </>
   )
 }
