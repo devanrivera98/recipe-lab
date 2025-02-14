@@ -13,8 +13,7 @@ export default function EachRecRecipe(recipe: RecRecipe) {
 
   return (
     <>
-    <Link href={`/search`}>
-
+      <Link href={`/search`}>
         <div className="recipe-card relative">
           <button
             className="mapped-recipes-button"
@@ -33,7 +32,6 @@ export default function EachRecRecipe(recipe: RecRecipe) {
           <h5 className="py-2.5 md:py-5">{recipe.foodType}</h5>
           <h1 className="item-title text-xl font-bold">{recipe.name}</h1>
         </div>
-
       </Link>
     </>
   );

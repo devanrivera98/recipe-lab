@@ -7,14 +7,13 @@ import "./scss/main.scss";
 
 const crimsonPro = Crimson_Pro({
   variable: "--font-crimson-pro",
-  subsets: ["latin"]
+  subsets: ["latin"],
 });
 
 const mulish = Mulish({
   variable: "--font-mulish",
-  subsets: ["latin"]
-})
-
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Rumble Recipe",
@@ -28,12 +27,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-            {/* <body
+      {/* <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       > */}
-      <body
-className={`${crimsonPro.variable} ${mulish.variable}`}
-      >
+      <body className={`${crimsonPro.variable} ${mulish.variable}`}>
         <Navbar />
         {children}
         <Footer />

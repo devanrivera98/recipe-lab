@@ -19,7 +19,10 @@ export default function Navbar() {
       <header className="h-20 p-4 md:p-0 shadow-md">
         <div className="container mx-auto h-full flex justify-between items-center">
           <div>
-            <Link href={'/'} className="hidden md:block text-xl font-extrabold font-body text-darkOrange cursor-pointer">
+            <Link
+              href={"/"}
+              className="hidden md:block text-xl font-extrabold font-body text-darkOrange cursor-pointer"
+            >
               Rumble Recipes
             </Link>
             <a className="md:hidden text-xl font-extrabold font-body text-darkOrange">
@@ -62,22 +65,22 @@ export default function Navbar() {
                 className={`${isOpen ? "menu-li-open" : "menu-li-closed"} text-xl font-heading`}
               >
                 <a className="cursor-pointer">
-                    <div className="text-xl pl-1">
-                      <span className="text-lg hover:underline underline-offset-4 decoration-lightOrange decoration-1">
-                        My Recipes
-                      </span>
-                    </div>
+                  <div className="text-xl pl-1">
+                    <span className="text-lg hover:underline underline-offset-4 decoration-lightOrange decoration-1">
+                      My Recipes
+                    </span>
+                  </div>
                 </a>
               </li>
               <li
                 className={`${isOpen ? "menu-li-open" : "menu-li-closed"} text-xl font-heading `}
               >
                 <a className="cursor-pointer">
-                    <div className="text-xl pl-1">
-                      <span className="text-lg hover:underline underline-offset-4 decoration-lightOrange decoration-1">
-                        Tips
-                      </span>
-                    </div>
+                  <div className="text-xl pl-1">
+                    <span className="text-lg hover:underline underline-offset-4 decoration-lightOrange decoration-1">
+                      Tips
+                    </span>
+                  </div>
                 </a>
               </li>
             </ul>
