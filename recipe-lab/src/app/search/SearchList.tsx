@@ -33,7 +33,7 @@ export default function SearchList({ query }: { query: string }) {
 
   return (
     <>
-      <ul className="search-items-container flex flex-wrap container mx-auto">
+      <ul className="px-2 md:px-0 search-items-container flex flex-wrap container mx-auto">
         {allSearchRecipes}
       </ul>
     </>

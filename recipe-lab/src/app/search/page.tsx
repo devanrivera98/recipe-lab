@@ -21,7 +21,7 @@ export default function SearchPage() {
   return (
     <>
       <section className="container py-5 mx-auto">
-        <div>
+        <div className="px-2 md:px-0">
           <h1 className="text-2xl pb-5">
             Search Results For <b>{query}</b>:
           </h1>
