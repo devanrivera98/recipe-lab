@@ -21,6 +21,7 @@
 @use "./components/articles";
 @use "./components/footer";
 @use "./components/search-card";
+@use "./components/loader";
 
 /* pages imports */
 @use "./pages/home";

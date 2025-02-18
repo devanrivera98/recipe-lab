@@ -11,6 +11,7 @@ export default function SearchBar() {
     e.preventDefault();
     // const data = await getSpoonRecipes(query);
     router.push(`/search?query=${encodeURIComponent(query)}`);
+    setQuery("");
   }
 
   function handleRecipeInput(e: React.ChangeEvent<HTMLInputElement>) {

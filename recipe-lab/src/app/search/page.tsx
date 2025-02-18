@@ -1,22 +1,19 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
+import { useState, useEffect } from "react";
 import SearchList from "./SearchList";
 
 export default function SearchPage() {
+  const [isLoading, setIsLoading] = useState<boolean>(true);
   const searchParams = useSearchParams();
   let query = searchParams.get("query");
 
-  // TEMPT ONLY REMOVE ONCE DONE TESTING
-  query = "empty";
-  // TEMPT ONLY REMOVE ONCE DONE TESTING
+  // need to clear the search bar issue next
 
   if (!query) {
     return "There seems to be no recipes for this item.";
   }
-  // see if i need to make a pages folder and restructure files
-
-  console.log("this is", query);
 
   return (
     <>
@@ -26,7 +23,12 @@ export default function SearchPage() {
             Search Results For <b>{query}</b>:
           </h1>
         </div>
-        <SearchList query={query} />
+        {isLoading && (
+          <div className="container mx-auto flex justify-center pt-10">
+            <div className="loader"></div>
+          </div>
+        )}
+        <SearchList query={query} setIsLoading={setIsLoading} />
       </section>
     </>
   );
