@@ -1,7 +1,7 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import SearchList from "./SearchList";
 
 export default function SearchPage() {
@@ -9,7 +9,9 @@ export default function SearchPage() {
   const searchParams = useSearchParams();
   let query = searchParams.get("query");
 
-  // need to clear the search bar issue next
+  useEffect(() => {
+    setIsLoading(true);
+  }, [query]);
 
   if (!query) {
     return "There seems to be no recipes for this item.";
@@ -28,7 +30,9 @@ export default function SearchPage() {
             <div className="loader"></div>
           </div>
         )}
-        <SearchList query={query} setIsLoading={setIsLoading} />
+        <div className={isLoading ? "hidden" : ""}>
+          <SearchList query={query} setIsLoading={setIsLoading} />
+        </div>
       </section>
     </>
   );

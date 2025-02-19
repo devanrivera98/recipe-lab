@@ -27,6 +27,7 @@ export default function SearchList({
   };
 
   useEffect(() => {
+    setIsLoading(true);
     getList();
   }, [query]);
 
