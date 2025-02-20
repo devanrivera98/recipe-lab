@@ -3,18 +3,42 @@
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import SearchList from "./SearchList";
+import getSpoonRecipes from "../utils/spoonacular/getSpoonRecipes";
+import { dataInterface } from "./interface/dataInterface";
+import ErrorMessage from "./ErrorMessage";
 
 export default function SearchPage() {
   const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [list, setList] = useState<dataInterface[]>([]);
   const searchParams = useSearchParams();
   let query = searchParams.get("query");
 
+  if (!query) {
+    return <ErrorMessage query={query} />;
+  }
+
   useEffect(() => {
     setIsLoading(true);
+    getList();
   }, [query]);
 
-  if (!query) {
-    return "There seems to be no recipes for this item.";
+  const getList = async () => {
+    if (!query) {
+      return <ErrorMessage query={query} />;
+    }
+    try {
+      const data = await getSpoonRecipes(query);
+      console.log(data);
+      setList(data.results);
+    } catch (err) {
+      console.error("An error occured while gathering recipes", err);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  if (list.length === 0) {
+    return <ErrorMessage query={query} />;
   }
 
   return (
@@ -25,14 +49,13 @@ export default function SearchPage() {
             Search Results For <b>{query}</b>:
           </h1>
         </div>
-        {isLoading && (
+        {isLoading ? (
           <div className="container mx-auto flex justify-center pt-10">
             <div className="loader"></div>
           </div>
+        ) : (
+          <SearchList data={list} />
         )}
-        <div className={isLoading ? "hidden" : ""}>
-          <SearchList query={query} setIsLoading={setIsLoading} />
-        </div>
       </section>
     </>
   );
