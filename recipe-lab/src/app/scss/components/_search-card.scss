@@ -1,0 +1,92 @@
+@use "../abstracts/mixins" as *;
+
+.search-items-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 0rem;
+}
+
+.search-card-container {
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+}
+
+.search-card-container:first-child .search-card-body {
+  padding-bottom: 2rem;
+}
+
+.search-card-container:nth-child(n + 2) .search-card-body {
+  padding: 2rem 0;
+}
+
+.search-image-container {
+  width: 10rem;
+  height: 8rem;
+  position: relative;
+  background-color: #a0a0a0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.search-image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.heart-button {
+  @include heart-button($right: 10px, $top: 20px);
+}
+
+.search-card-container:hover h1 {
+  @include underline-style;
+}
+
+@media screen and (min-width: 768px) {
+  .search-items-container {
+    grid-gap: 1.5rem;
+  }
+
+  .search-card-container {
+    border: solid;
+    border-color: rgba(0, 0, 0, 0.15);
+  }
+
+  .search-image-container {
+    width: 100%;
+    height: auto;
+    position: relative;
+    background-color: #a0a0a0;
+  }
+
+  .search-card-container:first-child .search-card-body {
+    padding-bottom: 0rem;
+  }
+
+  .search-card-container:nth-child(n + 2) .search-card-body {
+    padding: 0;
+  }
+
+  .search-items-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .heart-button {
+    @include heart-button($right: 20px);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .search-items-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .search-items-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

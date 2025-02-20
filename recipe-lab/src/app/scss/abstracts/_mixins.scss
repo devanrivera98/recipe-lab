@@ -33,7 +33,7 @@
 
 @mixin hover-item-title($color: $light-orange, $thickness: 1px, $offset: 4px) {
   &:hover .item-title {
-    @include underline-style($color, $thickness, $offset)
+    @include underline-style($color, $thickness, $offset);
   }
 }
 
@@ -42,8 +42,26 @@
   @include hover-item-title($color, $thickness, $offset);
 }
 
-@mixin rumble-brand($color: $dark-orange, $font-size: 18px, $font-weight: bold) {
+@mixin rumble-brand(
+  $color: $dark-orange,
+  $font-size: 18px,
+  $font-weight: bold
+) {
   color: $color;
   font-size: $font-size;
   font-weight: $font-weight;
+}
+
+@mixin heart-button($position: absolute, $top: 10px, $right: 10px) {
+  position: $position;
+  top: $top;
+  right: $right;
+  background-color: #ff7f50;
+  border-radius: 50%;
+  padding: 0.75rem;
+  color: white;
+
+  &:hover {
+    background-color: rgba(224, 108, 69, 0.936);
+  }
 }
